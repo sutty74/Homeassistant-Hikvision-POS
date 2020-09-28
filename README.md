@@ -20,10 +20,11 @@ This can be easily expanded to include any homeassistant event and further thoug
 # Tools Required
 
 Conmpatible Hikvision DVR/ NVR
+
 	Not all Hikvison recorders have the POS function so please check compatibility. I have seen POS on most NVR's such as the "I" series NVR and some DVR such as the DS-7316HUHI-K4 on which this has been tested on.
 	You Must have administrator access to the recorder to program the POS function
 
-IVMS4200 
+**IVMS-4200**
 The windows version 2 and version 3 supports POS
 The MAC version must be version 2.0.0.5 or higher?
 
@@ -34,5 +35,7 @@ Node Red
 I used the ingress version of node red, through HASS-OS but any i assume can be used 
 
 # Getting started
+I will be using IVMS 4200 version 3.1.1 to program and setup.
 
+Installing and setting up your recorder within IVMS is not part of this tutorial so we will jump straight into remote configuration of the recorder.
 
