@@ -35,4 +35,10 @@ I used the ingress version of node red, through HASS-OS but any i assume can be 
 
 # Getting started
 
+Recorder Setup
+The hikvision recorders have several ways to pull in POS data, but we will be using TCP/IP as the method for importing the data.
+I never found the POS programming from the recorders web pages, so you will have to get to the device configuration from IVMS.
+
+![GitHub Logo](C:\Users\ian\Documents\GitHub\Hassio-Hikvision-pos)
+Format: ![Alt Text](url)
 
