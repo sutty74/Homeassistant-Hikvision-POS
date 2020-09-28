@@ -39,3 +39,6 @@ I will be using IVMS 4200 version 3.1.1 to program and setup.
 
 Installing and setting up your recorder within IVMS is not part of this tutorial so we will jump straight into remote configuration of the recorder.
 
+From the remote configuration menu in maintenance and management of IVMS scroll to the bottom of the window and select POS.
+
+![ivms pos option](https://user-images.githubusercontent.com/53712651/94496365-17509a00-01ec-11eb-97a9-5cc1af0e1805.PNG)
