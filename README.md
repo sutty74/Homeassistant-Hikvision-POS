@@ -1,9 +1,9 @@
 # Hassio-Hikvision-pos
 
-# Description 
+## Description 
 Integration of Homeassistant events/ messages into Hikvision DVR/NVR via POS (Point of Sales).
 
-# My Reasoning
+## My Reasoning
 
 I am by no means a programmer and i have never used github before, i do not have much experience with YAML or Python. There is probably many other ways to easier and tidyier ways to accomplish the same task but i put this together with the knowledge i have obtained through my CCTV knowledge and google which is always everyones best friend.
 
@@ -17,12 +17,12 @@ IVMS-4200 is a good free viewing platform for Hikvision CCTV system, it has plen
 
 This can be easily expanded to include any homeassistant event and further thoughts include POS triggered recordings.
 
-# Tools Required
+## Requirments
 
 Conmpatible Hikvision DVR/ NVR
 
-	Not all Hikvison recorders have the POS function so please check compatibility. I have seen POS on most NVR's such as the "I" series NVR and some DVR such as the DS-7316HUHI-K4 on which this has been tested on.
-	You Must have administrator access to the recorder to program the POS function
+Not all Hikvison recorders have the POS function so please check compatibility. I have seen POS on most NVR's such as the "I" series NVR and some DVR such as the DS-7316HUHI-K4 on which this has been tested on.
+You Must have administrator access to the recorder to program the POS function
 
 **IVMS-4200**
 The windows version 2 and version 3 supports POS
@@ -39,6 +39,6 @@ I will be using IVMS 4200 version 3.1.1 to program and setup.
 
 Installing and setting up your recorder within IVMS is not part of this tutorial so we will jump straight into remote configuration of the recorder.
 
-From the remote configuration menu in maintenance and management of IVMS scroll to the bottom of the window and select POS.
+From the remote configuration menu in maintenance and management of IVMS scroll to the bottom of the window and select POS, then select the connection mode sub-menu.
 
 ![ivms pos option](https://user-images.githubusercontent.com/53712651/94496365-17509a00-01ec-11eb-97a9-5cc1af0e1805.PNG)
