@@ -8,10 +8,10 @@ Integration of Homeassistant events/ messages into Hikvision DVR/NVR via POS (Po
 I am by no means a programmer and i have never used github before, i do not have much experience with YAML or Python. There is probably many other ways to easier and tidyier ways to accomplish the same task but i put this together with the knowledge i have obtained through my CCTV knowledge and google which is always everyones best friend.
 
 I put this project together as we like to watch our pond from the CCTV system we have installed, i have installed a few sensors to watch for :-
-	-Pond temperature
-	-Water clarity
-	-Water depth
-	-External temperature
+	- Pond temperature
+	- Water clarity
+	- Water depth
+	- External temperature
 	
 Rather than have all this information shown over several pieces of software screens i decided to utilise the platform IVMS-4200. IVMS will also enable me to search for homeassistant events and view the synced video stream so i decided to intergrate the two.
 
@@ -27,7 +27,8 @@ Not all Hikvison recorders have the POS function so please check compatibility. 
 You Must have administrator access to the recorder to program the POS function
 
 **IVMS-4200**
-The windows version 2 and version 3 supports POS
+The windows version 2 and version 3 supports POS.
+
 The MAC version must be version 2.0.0.5 or higher?
 
 I have tested this on the above versions.
@@ -131,12 +132,12 @@ You should now be seeing in IVMS, selecting live view in the camera channel we s
 
 **Searching POS data from IVMS**
 
--Select remote playback
--Select your POS camera channel
--Enter your time/Date criteria (Defaults from Midnight the same day)
--Select the POS Icon from the left hand side.
--Type in the keyword(s) you are looking for.
--Hit Search
+- Select remote playback
+- Select your POS camera channel
+- Enter your time/Date criteria (Defaults from Midnight the same day)
+- Select the POS Icon from the left hand side.
+- Type in the keyword(s) you are looking for.
+- Hit Search
 
 Your results should show down the right hand side of the screen under "Event list", these can be selected individually by hitting the play button next to the event or just let them play through.
 
