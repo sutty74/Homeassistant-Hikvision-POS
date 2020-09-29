@@ -90,7 +90,9 @@ In the video window (Shown with the arrow) draw a box where you want to position
 
 Triggered Camera, for now select the camera channel you are currently displaying.
 
+##IVMS Step 4
 
+You have to turn on "Display Transaction Information" from within IVMS, it's found under "System Configuration" sub menu " Image". This is for both the MAC and windows version of IVMS
 
 I had to reboot my recorder before it would accept any connections on the programmed port, this included when i altered or added any additional connections.
 
@@ -122,5 +124,25 @@ Shows how i simply expanded on this to display more than one event in sequence.
 **Node-RED code**
 
 		[{"id":"cdc3ac16.68dfe","type":"inject","z":"7a9b006b.6cd62","name":"40 sec timer","props":[{"p":"payload"},{"p":"topic","vt":"str"}],"repeat":"40","crontab":"","once":true,"onceDelay":0.1,"topic":"","payload":"","payloadType":"date","x":120,"y":240,"wires":[["9a1bb87.1a43e48","4be4091f.c11568"]]},{"id":"9a1bb87.1a43e48","type":"api-render-template","z":"7a9b006b.6cd62","name":"Pond temp template","server":"b999d14.8e2393","template":" Pond Temp\n  {{ states('sensor.pond_temperature') }}C ","resultsLocation":"payload","resultsLocationType":"msg","templateLocation":"template","templateLocationType":"msg","x":340,"y":280,"wires":[["179c9b4f.ec0415"]]},{"id":"4be4091f.c11568","type":"delay","z":"7a9b006b.6cd62","name":"","pauseType":"delay","timeout":"10","timeoutUnits":"seconds","rate":"1","nbRateUnits":"1","rateUnits":"second","randomFirst":"1","randomLast":"5","randomUnits":"seconds","drop":false,"x":240,"y":340,"wires":[["108976a6.894099","ee90276c.0c5a98"]]},{"id":"108976a6.894099","type":"api-render-template","z":"7a9b006b.6cd62","name":"Pond clarity template","server":"b999d14.8e2393","template":" Clarity \n   {{ states('sensor.tds_ppm_rounded') }} ppm ","resultsLocation":"payload","resultsLocationType":"msg","templateLocation":"template","templateLocationType":"msg","x":540,"y":340,"wires":[["179c9b4f.ec0415"]]},{"id":"ee90276c.0c5a98","type":"delay","z":"7a9b006b.6cd62","name":"","pauseType":"delay","timeout":"10","timeoutUnits":"seconds","rate":"1","nbRateUnits":"1","rateUnits":"second","randomFirst":"1","randomLast":"5","randomUnits":"seconds","drop":false,"x":400,"y":400,"wires":[["e9b5442f.6f2058","66fa6cc4.571de4"]]},{"id":"e9b5442f.6f2058","type":"api-render-template","z":"7a9b006b.6cd62","name":"Pond water level template","server":"b999d14.8e2393","template":" Water Level \n{{ states('sensor.pondwater_level_percent') }} % ","resultsLocation":"payload","resultsLocationType":"msg","templateLocation":"template","templateLocationType":"msg","x":690,"y":400,"wires":[["179c9b4f.ec0415"]]},{"id":"66fa6cc4.571de4","type":"delay","z":"7a9b006b.6cd62","name":"","pauseType":"delay","timeout":"10","timeoutUnits":"seconds","rate":"1","nbRateUnits":"1","rateUnits":"second","randomFirst":"1","randomLast":"5","randomUnits":"seconds","drop":false,"x":560,"y":460,"wires":[["cb185088.e3676"]]},{"id":"cb185088.e3676","type":"api-render-template","z":"7a9b006b.6cd62","name":"Outside Temp template","server":"b999d14.8e2393","template":"Outside Temp {{ states('sensor.outside_temp') }}C ","resultsLocation":"payload","resultsLocationType":"msg","templateLocation":"template","templateLocationType":"msg","x":790,"y":460,"wires":[["179c9b4f.ec0415"]]},{"id":"179c9b4f.ec0415","type":"tcp request","z":"7a9b006b.6cd62","server":"192.168.0.3","port":"1031","out":"time","splitc":"0","name":"Send Event to DVR Rule 1","x":1000,"y":280,"wires":[[]]},{"id":"fc134a06.701048","type":"comment","z":"7a9b006b.6cd62","name":"Example 2 (Rotation of events)","info":"","x":190,"y":200,"wires":[]},{"id":"b999d14.8e2393","type":"server","z":"","name":"Home Assistant","legacy":false,"addon":true,"rejectUnauthorizedCerts":true,"ha_boolean":"y|yes|true|on|home|open","connectionDelay":true,"cacheJson":true}]
+
+
+You should now be seeing in IVMS, selecting live view in the camera channel we setup the events transmitted by homeassistant as POS data.
+
+
+**Searching POS data from IVMS**
+
+-Select remote playback
+-Select your POS camera channel
+-Enter your time/Date criteria (Defaults from Midnight the same day)
+-Select the POS Icon from the left hand side.
+-Type in the keyword(s) you are looking for.
+-Hit Search
+
+Your results should show down the right hand side of the screen under "Event list", these can be selected individually by hitting the play button next to the event or just let them play through.
+
+**Limitations (From what i can tell so far)**
+
+- The Recorder web browser will not show the POS data in live view, but you can display POS data in playback by checking the display transaction information button.
+- You cannot search for POS data from the web browser of the recorder.
 
 
