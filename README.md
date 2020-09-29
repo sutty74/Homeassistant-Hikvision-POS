@@ -5,7 +5,7 @@ Integration of Homeassistant events/ messages into Hikvision DVR/NVR via POS (Po
 
 ## My Reasoning
 
-I am by no means a programmer and i have never used github before, i do not have much experience with YAML or Python. There is probably many other ways to easier and tidyier ways to accomplish the same task but i put this together with the knowledge i have obtained through my CCTV knowledge and google which is always everyones best friend.
+I am by no means a programmer and i have never used github before, i do not have much experience with YAML or Python. There is probably many other easier and tidier ways to accomplish the same task but i put this together with the knowledge i have obtained through my CCTV knowledge and google which is always everyones best friend.
 
 I put this project together as we like to watch our pond from the CCTV system we have installed, i have installed a few sensors to watch for :-
 	- Pond temperature
@@ -23,7 +23,7 @@ This can be easily expanded to include any homeassistant event and further thoug
 
 Compatible Hikvision DVR/ NVR
 
-Not all Hikvison recorders have the POS function so please check compatibility. I have seen POS on most NVR's such as the "I" series NVR and some DVR such as the DS-7316HUHI-K4 on which this has been tested on.
+Not all Hikvison recorders have the POS function so please check compatibility. I have seen POS on most NVR's such as the "I" series NVR and some DVR such as the DS-7316HUHI-K4 on which this has been tested.
 You Must have administrator access to the recorder to program the POS function
 
 **IVMS-4200**
