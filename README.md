@@ -94,6 +94,13 @@ I had to reboot my recorder before it would accept any connections on the progra
 
 ## Node Red
 
+Example 1 shows a very simple timer sending the sun.sun state to the DVR as filter rule 1
+
+
+![nodered example1](https://user-images.githubusercontent.com/53712651/94610575-694ef980-0298-11eb-8dde-91e788822d94.png)
+
+		[{"id":"d5a6bc5c.a7bf8","type":"tcp request","z":"7a9b006b.6cd62","server":"192.168.0.3","port":"1031","out":"time","splitc":"0","name":"Send Event to DVR Rule 1","x":740,"y":120,"wires":[[]]},{"id":"6afaa498.6496ec","type":"inject","z":"7a9b006b.6cd62","name":"30 second Timer","props":[{"p":"payload"},{"p":"topic","vt":"str"}],"repeat":"30","crontab":"","once":false,"onceDelay":0.1,"topic":"","payload":"","payloadType":"date","x":190,"y":120,"wires":[["d9e3a5d4.147978"]]},{"id":"d9e3a5d4.147978","type":"api-render-template","z":"7a9b006b.6cd62","name":"Sun template","server":"b999d14.8e2393","template":"The sun is {{ states('sun.sun') }} ","resultsLocation":"payload","resultsLocationType":"msg","templateLocation":"template","templateLocationType":"msg","x":430,"y":120,"wires":[["d5a6bc5c.a7bf8"]]},{"id":"f06698bc.fc02e8","type":"comment","z":"7a9b006b.6cd62","name":"Example 1  (Simple Recurring message)","info":"","x":240,"y":60,"wires":[]},{"id":"b999d14.8e2393","type":"server","z":"","name":"Home Assistant","legacy":false,"addon":true,"rejectUnauthorizedCerts":true,"ha_boolean":"y|yes|true|on|home|open","connectionDelay":true,"cacheJson":true}]
+
 
 
 
