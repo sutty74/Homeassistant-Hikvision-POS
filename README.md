@@ -39,13 +39,13 @@ I will be using IVMS 4200 version 3.1.1 to program and setup.
 
 Installing and setting up your recorder within IVMS is not part of this tutorial so we will jump straight into remote configuration of the recorder.
 
+## IVMS Step 1
+
 From the recorder remote configuration menu in maintenance and management of IVMS scroll to the bottom of the window and select POS, then select the connection mode sub-menu.
 
 ![ivms pos option](https://user-images.githubusercontent.com/53712651/94496365-17509a00-01ec-11eb-97a9-5cc1af0e1805.PNG)
 
 We will setup the connection modes first.
-
-## IVMS Step 1
 
 Starting with filter rule 1 select the connection mode as TCP,
 
@@ -83,9 +83,18 @@ OSD Colour (I haven't been able to select any other colour than white)
 
 Timeout 5.
 
-In the video window draw a box where you want to show the POS text to be displayed.
+In the video window draw a box where you want to show the POS text to be displayed. As an additional step i setup a small privacy mask on the camera in the same position as the POS draw box, this helped display the POS text better.
 
 Triggered Camera, for now select the camera channel you are currently displaying.
+
+
+
+I had to reboot my recorder before it would accept any connections on the programmed port, this included when i altered or added any additional connections.
+
+
+## Node Red
+
+
 
 
 
