@@ -91,7 +91,7 @@ In the video window (Shown with the arrow) draw a box where you want to position
 
 Triggered Camera, for now select the camera channel you are currently displaying.
 
-##IVMS Step 4
+## IVMS Step 4
 
 You have to turn on "Display Transaction Information" from within IVMS, it's found under "System Configuration" sub menu " Image". This is for both the MAC and windows version of IVMS
 
